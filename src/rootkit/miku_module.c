@@ -1,19 +1,25 @@
 
+#include <linux/init.h>
+
 #include <linux/kernel.h>
 #include <linux/module.h>
 
-static int __init zuck_init(void) {
-    printk(KERN_INFO "Hello, earthlings!\n");
+static __init int miku_init(void) 
+{
+    pr_info("Hello, earthlings!\n");
     return 0;
 }
 
-static void __exit my_module_exit(void) {
-    printk(KERN_INFO "Goodbye, earthlings!\n");
+static __exit void miku_exit(void) 
+{
+    pr_info("Goodbye, earthlings!\n");
 }
 
-module_init(my_module_init);
-module_exit(my_module_exit);
+module_init(miku_init);
+module_exit(miku_exit);
 
 
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("Beerware");
+MODULE_DESCRIPTION("Ca fait rien pour l'instant gros");
+MODULE_AUTHOR("Hatsune Miku");
 

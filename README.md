@@ -25,6 +25,15 @@ Custom kernel module in C with a C2 to monitor actions
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 
+## Features 
+
+- LPE (Local Privilege Escalation)
+- Syscall hooking communicating with a C2
+- Access to critical data in kernel memory
+- Stealth/Anti-Detection
+- Obfuscation
+- Persistence
+
 
 ## How to compile and load the module
 

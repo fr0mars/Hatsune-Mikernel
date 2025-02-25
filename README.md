@@ -28,10 +28,19 @@ Custom kernel module in C with a C2 to monitor actions
 
 ## How to compile and load the module
 
-
+```
+make modules
+sudo insmod miku_module.ko
+```
 ## How to use 
 
-
 ## How to unload 
+```
+sudo rmmod miku_module.ko
+```
 
 ## How to clean
+
+```
+make clean
+```

@@ -27,6 +27,8 @@ Custom kernel module in C with a C2 to monitor actions
 
 ## Features 
 
+ ![image](doc/schema.png)
+
 - LPE (Local Privilege Escalation)
 - Syscall hooking communicating with a C2
 - Access to critical data in kernel memory

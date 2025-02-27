@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[
+
+    node distance=4cm,
+    box/.style={rectangle, draw, thick, minimum height=1.5cm, minimum width=3cm, align=center},
+    arrow/.style={-Latex, thick}
+]
+
+    % Attacker 
+    \node[box, fill=red!20] (attacker) {Attacker (C2 Client)};
+    
+    % Server 
+    \node[box, fill=gray!20, right=of attacker] (server) {C2 Server};
+    
+    % Victim Machine
+    \node[box, fill=orange!20, right=of server] (victim) {Victim Machine};
+    \node[box, fill=red!20, below=of victim, minimum width=2.5cm] (kernel_module) {Miku Module (Kernel)};
+    \draw[arrow] (attacker) -- node[midway, above] {Command} (server);
+    \draw[arrow] (server) -- node[midway, above] {Command Forward} (victim);
+    \draw[arrow] (kernel_module) -- node[midway, left=0.5cm] {Data} (server);
+    \draw[arrow] (server) -- node[midway, below] {Data Forward} (attacker);
+    \node[above=0.5cm of attacker] {Attacker IP};
+    \node[above=0.5cm of server] {Server IP };
+    \node[above=0.5cm of victim] {Victim IP};
+
+\end{tikzpicture}
+
+\end{document}

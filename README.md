@@ -1,6 +1,8 @@
 # Hatsune-Mikernel
 
-Custom kernel module in C with a C2 to monitor actions
+/!\ Work In progress, project just started (february 2025) /!\
+
+Custom Linux Rootkit
 
 
 
@@ -25,17 +27,20 @@ Custom kernel module in C with a C2 to monitor actions
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 
-## Features 
+## Features to be Added
+
+Illustration without bluepill
 
  ![image](doc/schema.png)
 
-- LPE (Local Privilege Escalation)
+- LPE (Local Privilege Escalation) on a process
 - Syscall hooking communicating with a C2
 - Access to critical data in kernel memory
 - Stealth/Anti-Detection
 - Obfuscation
 - Persistence
 
+- IF POSSIBLE , bluepill with a custom hypervisor
 
 ## How to compile and load the module
 
@@ -43,6 +48,7 @@ Custom kernel module in C with a C2 to monitor actions
 make modules
 sudo insmod miku_module.ko
 ```
+
 ## How to use 
 
 ## How to unload 
